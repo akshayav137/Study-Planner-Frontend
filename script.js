@@ -1,4 +1,5 @@
 // Render backend URL, without the endpoint path.
+//gittest comment
 const BACKEND_URL = "https://study-planner-backend-f7vj.onrender.com";
 
 const form = document.getElementById("study-plan-form");
