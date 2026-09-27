@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Session Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Study Session Generator</h1>
+    <p>Enter your preferences to create a study plan. All fields are required.</p>
+
+    <form id="study-plan-form">
+      <div>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="e.g., Biology" required>
+      </div>
+
+      <div>
+        <label for="minutes">Available study time (minutes)</label>
+        <input type="number" id="minutes" name="minutes" min="1" step="1" required>
+      </div>
+
+      <div>
+        <label for="difficulty">Difficulty level</label>
+        <select id="difficulty" name="difficulty" required>
+          <option value="" disabled selected>Select difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="energy">Energy level</label>
+        <select id="energy" name="energy" required>
+          <option value="" disabled selected>Select energy level</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <button type="submit" id="generate-plan-button">Generate Study Plan</button>
+    </form>
+
+    <!-- JavaScript will display loading and error messages here. -->
+    <p id="status-message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="plan-heading">
+      <h2 id="plan-heading">Your Study Plan</h2>
+      <div id="study-plan" aria-live="polite">
+        <p>Your generated study plan will appear here.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

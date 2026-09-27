@@ -1,0 +1,186 @@
+/* Keep padding and borders inside each element's width. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Main app card */
+main {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+main > p {
+  margin: 0 0 24px;
+  color: #475569;
+}
+
+/* Form controls */
+form {
+  display: grid;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  border: 1px solid #94a3b8;
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+input::placeholder {
+  color: #64748b;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+button {
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+button:active:not(:disabled) {
+  background-color: #1e3a8a;
+}
+
+button:disabled {
+  background-color: #64748b;
+  cursor: wait;
+}
+
+/* Loading and error messages */
+#status-message {
+  margin: 16px 0 0;
+  color: #334155;
+  overflow-wrap: anywhere;
+}
+
+#status-message:empty {
+  margin: 0;
+}
+
+/* JavaScript can add this class when a request fails. */
+#status-message.error {
+  padding: 12px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+/* Generated study plan */
+section {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+#study-plan {
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+#study-plan p,
+#study-plan ul,
+#study-plan ol {
+  margin: 0 0 12px;
+}
+
+#study-plan ul,
+#study-plan ol {
+  padding-left: 24px;
+}
+
+#study-plan li + li {
+  margin-top: 8px;
+}
+
+#study-plan > :last-child {
+  margin-bottom: 0;
+}
+
+/* Reduce spacing on small screens. */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  main {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  #study-plan {
+    padding: 16px;
+  }
+}
